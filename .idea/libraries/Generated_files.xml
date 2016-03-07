@@ -3,11 +3,17 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/APM/app/products/productListController.js" />
+        <item url="file://$PROJECT_DIR$/APM/app/common/services/common.services.js" />
+        <item url="file://$PROJECT_DIR$/APM/app/products/products.js" />
+        <item url="file://$PROJECT_DIR$/APM/app/common/services/dataAccessService.js" />
         <item url="file://$PROJECT_DIR$/APM/app/app.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/APM/app/products/productListController.js" />
+      <root url="file://$PROJECT_DIR$/APM/app/common/services/common.services.js" />
+      <root url="file://$PROJECT_DIR$/APM/app/products/products.js" />
+      <root url="file://$PROJECT_DIR$/APM/app/common/services/dataAccessService.js" />
       <root url="file://$PROJECT_DIR$/APM/app/app.js" />
     </CLASSES>
     <SOURCES />

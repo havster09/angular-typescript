@@ -1,16 +1,17 @@
 /// <reference path="../../typings/tsd.d.ts" />
+/// <reference path="products.ts" />
 module app.productList {
     interface IProductListModel {
         title:string;
         showImage:boolean;
-        products:any[];
+        products:app.domain.IProduct[];
         toggleImage():void;
     }
 
     class ProductListController implements IProductListModel {
         title:string;
         showImage:boolean;
-        products:any[];
+        products:app.domain.IProduct[];
 
         constructor() {
             this.title = 'Product List';
@@ -44,6 +45,11 @@ module app.productList {
                     "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
                 }
             ];
+
+            var newProduct = new app.domain.Product(3,'saw','dfgdeg',new Date(2013, 4, 21),345,'sm saw','http://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png');
+            newProduct.price = newProduct.calculateDiscount(10);
+
+            this.products.push(newProduct);
         }
 
         toggleImage():void {

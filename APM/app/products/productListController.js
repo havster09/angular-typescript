@@ -1,4 +1,5 @@
 /// <reference path="../../typings/tsd.d.ts" />
+/// <reference path="products.ts" />
 var app;
 (function (app) {
     var productList;
@@ -36,14 +37,16 @@ var app;
                         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
                     }
                 ];
+                var newProduct = new app.domain.Product(3, 'saw', 'dfgdeg', new Date(2013, 4, 21), 345, 'sm saw', 'http://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png');
+                newProduct.price = newProduct.calculateDiscount(10);
+                this.products.push(newProduct);
             }
             ProductListController.prototype.toggleImage = function () {
                 this.showImage = !this.showImage;
             };
             return ProductListController;
-        }());
+        })();
         angular.module('productManagement')
             .controller('ProductListController', ProductListController);
     })(productList = app.productList || (app.productList = {}));
 })(app || (app = {}));
-//# sourceMappingURL=productListController.js.map
